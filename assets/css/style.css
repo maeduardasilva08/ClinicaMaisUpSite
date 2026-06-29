@@ -1,0 +1,470 @@
+/* ========================================
+   VARIÁVEIS
+======================================== */
+
+:root {
+    --primary: #8BAA91;
+    --secondary: #C9A227;
+    --white: #FFFFFF;
+    --light: #F8F8F8;
+    --dark: #333333;
+}
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: #fff;
+}
+
+/* ========================================
+   CONTAINER GENÉRICO
+======================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;       /* Só espaçamento lateral — sem flex aqui */
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    z-index: 999;
+}
+
+/* Flex aplicado no wrapper interno do header, não no .container */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.logo img {
+    height: 70px;
+}
+
+/* ========================================
+   NAVEGAÇÃO
+======================================== */
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color .3s;   /* Transição específica, não genérica */
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* ========================================
+   BOTÃO DO HEADER
+======================================== */
+
+.btn-header {
+    display: inline-block;          /* Garante padding vertical correto */
+    background: var(--secondary);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background .3s, color .3s;
+}
+
+.btn-header:hover {
+    background: var(--primary);
+    color: var(--white);            /* Garante que o texto não muda */
+}
+
+/*=====================================
+ HERO
+======================================*/
+
+.hero{
+
+    padding-top:140px;
+    padding-bottom:70px;
+
+    background:linear-gradient(
+        135deg,
+        #ffffff,
+        #f5f9f5
+    );
+
+}
+
+.hero-content{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:60px;
+
+}
+
+.hero-text{
+
+    flex:1;
+
+}
+
+.hero-subtitle{
+
+    color:var(--primary);
+
+    font-size:18px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+}
+
+.hero h1{
+
+    margin-top:20px;
+
+    font-size:65px;
+
+    line-height:1.1;
+
+    font-family:'Playfair Display', serif;
+
+    color:var(--dark);
+
+}
+
+.hero h1 span{
+
+    color:var(--primary);
+
+}
+
+.hero p{
+
+    margin-top:30px;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+.hero-buttons{
+
+    margin-top:40px;
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:18px 35px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+    background:#6b9077;
+
+}
+
+.btn-secondary{
+
+    border:2px solid var(--secondary);
+
+    color:var(--dark);
+
+    padding:18px 35px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+.hero-image{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:550px;
+
+    border-radius:35px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+/*=====================================
+CARDS
+======================================*/
+
+.highlights{
+
+    margin-top:-40px;
+
+    margin-bottom:80px;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.card-highlight{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.card-highlight i{
+
+    font-size:40px;
+
+    color:var(--secondary);
+
+}
+
+.card-highlight h3{
+
+    margin-top:20px;
+
+    color:var(--primary);
+
+}
+
+.card-highlight p{
+
+    margin-top:10px;
+
+}
+
+/*=====================================
+EQUIPE
+======================================*/
+
+.team{
+
+    padding:100px 0;
+
+    background:#F8F8F8;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title span{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+}
+
+.section-title h2{
+
+    font-family:'Playfair Display', serif;
+
+    font-size:45px;
+
+    margin-top:15px;
+
+}
+
+.section-title p{
+
+    margin-top:20px;
+
+    max-width:700px;
+
+    margin-inline:auto;
+
+    color:#666;
+
+}
+
+.team-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.team-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.team-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.team-card img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+}
+
+.team-info{
+
+    padding:30px;
+
+}
+
+.team-info h3{
+
+    color:var(--primary);
+
+}
+
+.team-info h4{
+
+    margin:15px 0;
+
+    font-size:16px;
+
+    color:#666;
+
+}
+
+.team-info p{
+
+    line-height:1.7;
+
+}
+
+.team-button{
+
+    margin-top:25px;
+
+    width:100%;
+
+    border:none;
+
+    padding:14px;
+
+    background:var(--secondary);
+
+    color:white;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.team-button:hover{
+
+    background:var(--primary);
+
+}
