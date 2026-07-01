@@ -155,7 +155,51 @@
 
 </section>
 
+        <!-- ========================================= -->
+        <!-- PROCEDIMENTOS -->
+        <!-- ========================================= -->
 
+        <section id="procedimentos">
+
+            <div class="container">
+
+                <h2>Nossos Procedimentos</h2>
+
+                <p class="subtitulo">
+                    Conheça alguns dos tratamentos realizados pela Clínica Mais Up para cuidar da sua saúde, autoestima e bem-estar.
+                </p>
+
+                <div class="categorias">
+
+                    <button class="categoria ativa" data-categoria="facial">
+                        Estética Facial
+                    </button>
+
+                    <button class="categoria" data-categoria="corporal">
+                        Estética Corporal
+                    </button>
+
+                    <button class="categoria" data-categoria="embelezamento">
+                        Embelezamento
+                    </button>
+
+                    <button class="categoria" data-categoria="depilacao">
+                        Depilação
+                    </button>
+
+                    <button class="categoria" data-categoria="nutricao">
+                        Nutrição
+                    </button>
+
+                </div>
+
+                <div id="listaProcedimentos" class="cards-procedimentos">
+
+                </div>
+
+            </div>
+
+        </section>
 
 <!-- ================= EQUIPE ================= -->
 
@@ -192,7 +236,7 @@
 
                 <div class="team-info">
 
-                    <h3>Lilian Gabriele</h3>
+                    <h3>Lilian Gabriel</h3>
 
                     <h4>Esteticista e Cosmetóloga</h4>
 
@@ -203,9 +247,12 @@
 
                     </p>
 
-                    <button class="team-button">
-                        Saiba mais
-                    </button>
+                   <button class="btn-saiba"
+                    onclick="abrirModal('lilian')">
+
+Saiba Mais
+
+</button>
 
                 </div>
 
@@ -230,9 +277,12 @@
 
                     </p>
 
-                    <button class="team-button">
-                        Saiba mais
-                    </button>
+                   <button class="btn-saiba"
+                    onclick="abrirModal('larissa')">
+
+Saiba Mais
+
+</button>
 
                 </div>
 
@@ -246,7 +296,7 @@
 
                 <div class="team-info">
 
-                    <h3>Fabiola</h3>
+                    <h3>Fabiola Nizola</h3>
 
                     <h4>Esteticista e Nutricionista</h4>
 
@@ -257,8 +307,12 @@
 
                     </p>
 
-                    <button class="team-button">
-                        Saiba mais
+
+                    <button class="btn-saiba"
+                     onclick="abrirModal('fabiola')">
+
+                    Saiba Mais
+
                     </button>
 
                 </div>
@@ -284,8 +338,11 @@
 
                     </p>
 
-                    <button class="team-button">
-                        Saiba mais
+                    <button class="btn-saiba"
+                    onclick="abrirModal('janaina')">
+
+                    Saiba Mais
+
                     </button>
 
                 </div>
@@ -298,27 +355,239 @@
 
 </section>
 
-        <section id="sobre">
+        <section id="sobre" class="sobre">
+
+            <div class="container">
+
+                <div class="section-title">
+                    <span>SOBRE NÓS</span>
+                    <h2>Nossa História</h2>
+                </div>
+
+                <div class="sobre-content">
+
+                    <div class="sobre-texto">
+
+                        <p>
+                            A Clínica Mais Up nasceu do desejo de oferecer muito mais do que
+                            procedimentos estéticos: nosso propósito é proporcionar autoestima,
+                            bem-estar e resultados reais para cada pessoa que passa pela nossa porta.
+                        </p>
+
+                        <p>
+                            Há mais de <strong>8 anos</strong> no mercado, reunimos uma equipe de
+                            profissionais especializadas que unem técnica, tecnologia de ponta e,
+                            acima de tudo, um atendimento humanizado. Acreditamos que cada paciente
+                            é único, e por isso cada protocolo é pensado de forma individual, respeitando
+                            as necessidades e objetivos de cada um.
+                        </p>
+
+                    </div>
+
+                    <div class="sobre-valores">
+
+                        <div class="valor-item">
+                            <i class="fa-solid fa-bullseye"></i>
+                            <div>
+                                <h4>Missão</h4>
+                                <p>Promover saúde, autoestima e bem-estar através de tratamentos estéticos seguros, personalizados e humanizados.</p>
+                            </div>
+                        </div>
+
+                        <div class="valor-item">
+                            <i class="fa-solid fa-eye"></i>
+                            <div>
+                                <h4>Visão</h4>
+                                <p>Ser referência em estética avançada, reconhecida pela excelência técnica e pelo cuidado genuíno com cada paciente.</p>
+                            </div>
+                        </div>
+
+                        <div class="valor-item">
+                            <i class="fa-solid fa-gem"></i>
+                            <div>
+                                <h4>Valores</h4>
+                                <p>Ética, empatia, atualização constante e compromisso com resultados seguros e naturais.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <section id="procedimentos">
-        </section>
+        <section id="contato" class="contato">
 
-        <section id="equipe">
-        </section>
+            <div class="container">
 
-        <section id="contato">
+                <div class="section-title">
+                    <span>CONTATO</span>
+                    <h2>Venha nos Visitar</h2>
+                    <p>Estamos prontas para te receber e cuidar da sua beleza com todo carinho.</p>
+                </div>
+
+                <div class="contato-content">
+
+                    <div class="contato-info">
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Endereço</h4>
+                                <p>Rua Rússia, 65 – Jardim Planalto</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Telefone / WhatsApp</h4>
+                                <p><a href="https://wa.me/5511985813441" target="_blank">(11) 98581-3441</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <h4>Horário de Funcionamento</h4>
+                                <p>
+                                    Segunda a sexta-feira: 8h às 18h<br>
+                                    Sábado: 8h às 12h
+                                </p>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5511985813441" target="_blank" class="btn-primary">
+                            Agende sua Avaliação
+                        </a>
+
+                    </div>
+
+                    <div class="contato-mapa">
+                        <iframe
+                            src="https://www.google.com/maps?q=Rua+R%C3%BAssia,+65,+Jardim+Planalto&output=embed"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
     </main>
+
+    <!-- Modal Profissionais -->
+    <div id="modalProfissional" class="modal">
+
+        <div class="modal-content">
+
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+
+            <h2 id="modalNome"></h2>
+
+            <p id="modalCargo" class="cargo-modal"></p>
+
+            <hr>
+
+            <div class="modal-section">
+                <h3>Formação</h3>
+                <p id="modalFormacao"></p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Sobre</h3>
+                <p id="modalSobre"></p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Especialidades</h3>
+                <ul id="modalEspecialidades"></ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Missão</h3>
+                <p id="modalMissao"></p>
+            </div>
+
+            <a
+                id="btnWhatsapp"
+                class="btn-whatsapp"
+                target="_blank">
+                Agendar pelo WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+    <!-- ================= FIM MODAL PROFISSIONAIS ================= -->
+
+    <!-- ========================================= -->
+    <!-- MODAL PROCEDIMENTOS -->
+    <!-- ========================================= -->
+
+    <div id="modalProcedimento" class="modal">
+
+        <div class="modal-content">
+
+            <span class="fechar" onclick="fecharModalProcedimento()">&times;</span>
+
+            <h2 id="tituloProcedimento"></h2>
+
+            <hr>
+
+            <div class="modal-section">
+
+                <h3>O que é</h3>
+
+                <p id="descricaoProcedimento"></p>
+
+            </div>
+
+            <div class="modal-section">
+
+                <h3>Benefícios</h3>
+
+                <ul id="beneficiosProcedimento"></ul>
+
+            </div>
+
+            <div class="modal-section">
+
+                <h3>Indicações</h3>
+
+                <p id="indicacoesProcedimento"></p>
+
+            </div>
+
+            <a
+                id="btnWhatsappProcedimento"
+                class="btn-whatsapp"
+                target="_blank">
+
+                Agendar pelo WhatsApp
+
+            </a>
+
+        </div>
+
+    </div>
+    <!-- ================= FIM MODAL PROCEDIMENTOS ================= -->
 
     <!-- ===== RODAPÉ ===== -->
     <footer>
     </footer>
 
-    <!-- Scripts — apenas uma vez, no final -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
