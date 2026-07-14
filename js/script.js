@@ -175,441 +175,395 @@ window.onclick = function(event){
 }
 
 // ===============================
-// PROCEDIMENTOS - RENDERIZAR CARDS
+// PROCEDIMENTOS - DADOS
 // ===============================
 
 const procedimentos = [
-
-    {
-        nome:"Limpeza de Pele",
-
-        categoria:"facial",
-
-        descricao:"A limpeza de pele promove uma higienização profunda, removendo impurezas, células mortas e controlando a oleosidade, deixando a pele saudável e renovada.",
-
-        beneficios:[
-            "Pele mais limpa",
-            "Controle da oleosidade",
-            "Remoção de cravos",
-            "Renovação celular"
-        ],
-
-        indicacoes:"Indicada para todos os tipos de pele, principalmente para quem apresenta excesso de oleosidade, cravos ou deseja manter a pele saudável."
-    },
-
-    {
-        nome:"Bioestimulador de Colágeno",
-
-        categoria:"facial",
-
-        descricao:"Procedimento que estimula naturalmente a produção de colágeno, melhorando a firmeza e a sustentação da pele.",
-
-        beneficios:[
-            "Mais firmeza",
-            "Melhora da flacidez",
-            "Estimula colágeno",
-            "Resultado natural"
-        ],
-
-        indicacoes:"Indicado para quem deseja prevenir ou tratar a flacidez facial."
-    },
-
-    {
-        nome:"Preenchimento Facial",
-
-        categoria:"facial",
-
-        descricao:"Realiza a reposição de volume e melhora os contornos da face utilizando ácido hialurônico.",
-
-        beneficios:[
-            "Harmonização facial",
-            "Reposição de volume",
-            "Resultados naturais"
-        ],
-
-        indicacoes:"Indicado para quem deseja realçar lábios, queixo, mandíbula ou suavizar sulcos."
-    },
-
-    {
-        nome:"Botox",
-
-        categoria:"facial",
-
-        descricao:"Aplicação de toxina botulínica para suavizar linhas de expressão e prevenir rugas.",
-
-        beneficios:[
-            "Redução de rugas",
-            "Prevenção do envelhecimento",
-            "Aspecto natural"
-        ],
-
-        indicacoes:"Indicado para rugas da testa, glabela e pés de galinha."
-    },
-
-    {
-        nome:"Microagulhamento",
-
-        categoria:"facial",
-
-        descricao:"Tratamento que estimula a produção de colágeno através de microperfurações controladas na pele.",
-
-        beneficios:[
-            "Melhora cicatrizes",
-            "Reduz poros",
-            "Uniformiza a pele"
-        ],
-
-        indicacoes:"Ideal para cicatrizes de acne, manchas e rejuvenescimento."
-    },
-
-    {
-        nome:"Laser Lavieen",
-
-        categoria:"facial",
-
-        descricao:"Laser de última geração indicado para rejuvenescimento, manchas e melhora da textura da pele.",
-
-        beneficios:[
-            "Pele iluminada",
-            "Redução de manchas",
-            "Rejuvenescimento"
-        ],
-
-        indicacoes:"Para quem deseja renovar a pele e melhorar sua aparência."
-    },
-
-    {
-        nome:"Laser CO₂",
-
-        categoria:"facial",
-
-        descricao:"Laser fracionado utilizado para rejuvenescimento e tratamento de cicatrizes.",
-
-        beneficios:[
-            "Redução de rugas",
-            "Melhora cicatrizes",
-            "Estimula colágeno"
-        ],
-
-        indicacoes:"Indicado para rejuvenescimento facial e cicatrizes."
-    },
-
-    {
-        nome:"Skinbooster",
-
-        categoria:"facial",
-
-        descricao:"Hidratação profunda da pele através da aplicação de ácido hialurônico de baixa densidade.",
-
-        beneficios:[
-            "Hidratação intensa",
-            "Mais brilho",
-            "Melhora textura"
-        ],
-
-        indicacoes:"Ideal para peles ressecadas e envelhecidas."
-    },
-
-    {
-        nome:"Micropigmentação",
-
-        categoria:"embelezamento",
-
-        descricao:"Técnica que deposita pigmento na pele para desenhar e preencher os fios das sobrancelhas, proporcionando um efeito natural e duradouro.",
-
-        beneficios:[
-            "Sobrancelhas definidas",
-            "Efeito fio a fio natural",
-            "Resultado duradouro",
-            "Menos tempo na rotina de maquiagem"
-        ],
-
-        indicacoes:"Indicada para quem tem falhas nas sobrancelhas ou deseja um design mais definido e duradouro."
-    },
-
-    {
-        nome:"Design de Sobrancelhas (com ou sem Henna)",
-
-        categoria:"embelezamento",
-
-        descricao:"Modelagem das sobrancelhas de acordo com o formato do rosto, podendo incluir a aplicação de henna para intensificar a cor e o preenchimento visual.",
-
-        beneficios:[
-            "Harmonização facial",
-            "Sobrancelhas simétricas",
-            "Efeito preenchido com henna",
-            "Realça o olhar"
-        ],
-
-        indicacoes:"Indicado para quem deseja simetria e um contorno personalizado para as sobrancelhas."
-    },
-
-    {
-        nome:"Lash Lifting",
-
-        categoria:"embelezamento",
-
-        descricao:"Técnica que curva e alonga visualmente os cílios naturais, dando um efeito de curvatura duradoura sem a necessidade de extensões.",
-
-        beneficios:[
-            "Cílios curvados naturalmente",
-            "Efeito duradouro",
-            "Dispensa uso de curvex",
-            "Olhar mais aberto"
-        ],
-
-        indicacoes:"Indicado para quem deseja realçar os cílios naturais sem aplicar extensões."
-    },
-
-    {
-        nome:"Brow Lamination",
-
-        categoria:"embelezamento",
-
-        descricao:"Técnica que alinha e fixa os fios das sobrancelhas em um novo formato, criando um efeito mais volumoso e uniforme.",
-
-        beneficios:[
-            "Sobrancelhas mais cheias",
-            "Fios alinhados",
-            "Efeito duradouro",
-            "Look natural e moderno"
-        ],
-
-        indicacoes:"Indicado para quem tem sobrancelhas desalinhadas ou deseja um efeito mais volumoso."
-    },
-
-    {
-        nome:"Depilação com Cera",
-
-        categoria:"depilacao",
-
-        descricao:"Remoção dos pelos pela raiz utilizando cera quente ou morna, proporcionando uma pele lisa por mais tempo.",
-
-        beneficios:[
-            "Pele lisa e macia",
-            "Resultado duradouro",
-            "Reduz o volume de pelos com o tempo"
-        ],
-
-        indicacoes:"Indicada para quem busca uma remoção rápida e acessível dos pelos."
-    },
-
-    {
-        nome:"Depilação a Laser",
-
-        categoria:"depilacao",
-
-        descricao:"Tecnologia que reduz progressivamente o crescimento dos pelos através da emissão de luz concentrada no folículo piloso.",
-
-        beneficios:[
-            "Redução progressiva dos pelos",
-            "Menos pelos encravados",
-            "Pele lisa por mais tempo",
-            "Praticidade no dia a dia"
-        ],
-
-        indicacoes:"Indicada para quem deseja reduzir o crescimento de pelos de forma definitiva e duradoura."
-    },
-
-    {
-        nome:"Avaliação Nutricional",
-
-        categoria:"nutricao",
-
-        descricao:"Consulta individualizada para avaliar hábitos alimentares e montar um plano nutricional alinhado aos objetivos estéticos e de saúde do paciente.",
-
-        beneficios:[
-            "Plano alimentar personalizado",
-            "Acompanhamento profissional",
-            "Potencializa resultados estéticos",
-            "Melhora da saúde geral"
-        ],
-
-        indicacoes:"Indicada para quem deseja aliar alimentação saudável aos tratamentos estéticos."
-    },
-
-    {
-        nome:"Aplicação de Vasinhos",
-
-        categoria:"corporal",
-
-        descricao:"Procedimento que trata vasinhos e microvarizes através da aplicação de substância que promove o fechamento dos vasos.",
-
-        beneficios:[
-            "Redução dos vasinhos",
-            "Pernas com aspecto mais uniforme",
-            "Procedimento rápido"
-        ],
-
-        indicacoes:"Indicado para quem tem vasinhos visíveis nas pernas e deseja um resultado mais uniforme na pele."
-    },
-
-    {
-        nome:"Aplicação de Enzimas",
-
-        categoria:"corporal",
-
-        descricao:"Aplicação de enzimas que auxiliam na quebra de gordura localizada e na melhora da textura da pele.",
-
-        beneficios:[
-            "Auxilia na redução de gordura localizada",
-            "Melhora a textura da pele",
-            "Complementa outros tratamentos corporais"
-        ],
-
-        indicacoes:"Indicado para gordura localizada e áreas com irregularidades na pele."
-    },
-
-    {
-        nome:"Criofrequência",
-
-        categoria:"corporal",
-
-        descricao:"Combina o efeito da radiofrequência com o resfriamento da pele, auxiliando na redução de medidas e na melhora da flacidez.",
-
-        beneficios:[
-            "Redução de medidas",
-            "Melhora da flacidez",
-            "Estimula a produção de colágeno"
-        ],
-
-        indicacoes:"Indicado para gordura localizada e flacidez corporal."
-    },
-
-    {
-        nome:"Criolipólise",
-
-        categoria:"corporal",
-
-        descricao:"Técnica não invasiva que utiliza o frio controlado para reduzir a gordura localizada em áreas específicas do corpo.",
-
-        beneficios:[
-            "Redução de gordura localizada",
-            "Procedimento não invasivo",
-            "Sem tempo de recuperação"
-        ],
-
-        indicacoes:"Indicado para gordura localizada resistente a dieta e exercícios."
-    },
-
-    {
-        nome:"Carboxiterapia",
-
-        categoria:"corporal",
-
-        descricao:"Aplicação de gás carbônico medicinal sob a pele, que melhora a circulação local e auxilia na redução de gordura e flacidez.",
-
-        beneficios:[
-            "Melhora a circulação",
-            "Auxilia na redução de gordura localizada",
-            "Melhora a flacidez e celulite"
-        ],
-
-        indicacoes:"Indicado para gordura localizada, flacidez e celulite."
-    },
-
-    {
-        nome:"Ultrassom",
-
-        categoria:"corporal",
-
-        descricao:"Tratamento que utiliza ondas de ultrassom para estimular a quebra de células de gordura e melhorar a textura da pele.",
-
-        beneficios:[
-            "Auxilia na redução de medidas",
-            "Melhora a textura da pele",
-            "Estimula a circulação"
-        ],
-
-        indicacoes:"Indicado para gordura localizada e melhora do contorno corporal."
-    },
-
-    {
-        nome:"Radiofrequência",
-
-        categoria:"corporal",
-
-        descricao:"Tecnologia que aquece as camadas mais profundas da pele, estimulando a produção de colágeno e melhorando a firmeza.",
-
-        beneficios:[
-            "Melhora da flacidez",
-            "Estimula colágeno",
-            "Pele mais firme"
-        ],
-
-        indicacoes:"Indicado para flacidez corporal e melhora da firmeza da pele."
-    },
-
-    {
-        nome:"Pós-Operatório",
-
-        categoria:"corporal",
-
-        descricao:"Conjunto de cuidados e técnicas para auxiliar na recuperação após cirurgias plásticas, reduzindo inchaço e melhorando a cicatrização.",
-
-        beneficios:[
-            "Reduz inchaço e edemas",
-            "Melhora a cicatrização",
-            "Acelera a recuperação"
-        ],
-
-        indicacoes:"Indicado para pacientes no período de recuperação de cirurgias plásticas."
-    }
-
+  {
+    nome: "Alongamento de Cílios",
+    categoria: "Estética & Beleza",
+    descricao: "Técnica que adiciona fios sintéticos aos cílios naturais, proporcionando mais volume, curvatura e comprimento, com acabamento natural ou dramático.",
+    beneficios: ["Mais volume e curvatura", "Efeito natural ou dramático", "Praticidade no dia a dia"],
+    indicacoes: ["Olhos pequenos", "Cílios finos", "Ocasiões especiais"]
+  },
+  {
+    nome: "Aplicação de Enzimas para Gordura, Flacidez e Celulite",
+    categoria: "Corporal",
+    descricao: "Injeção de enzimas lipolíticas que aceleram a quebra de gordura localizada, melhoram a firmeza da pele e reduzem a aparência da celulite.",
+    beneficios: ["Redução de gordura localizada", "Melhora da firmeza", "Redução de celulite"],
+    indicacoes: ["Gordura localizada", "Celulite", "Flacidez corporal"]
+  },
+  {
+    nome: "Aplicação de Enzimas para Papada",
+    categoria: "Corporal",
+    descricao: "Aplicação de enzimas específicas na região submentoniana para reduzir o acúmulo de gordura e definir o contorno da mandíbula.",
+    beneficios: ["Redução da papada", "Contorno facial definido", "Procedimento não cirúrgico"],
+    indicacoes: ["Papada", "Duplo queixo", "Contorno facial"]
+  },
+  {
+    nome: "Aplicação de Vasinhos",
+    categoria: "Facial",
+    descricao: "Escleroterapia para tratamento de pequenas veias superficiais visíveis no rosto, eliminando-as com segurança e sem cirurgia.",
+    beneficios: ["Eliminação de vasinhos", "Pele mais uniforme", "Procedimento seguro"],
+    indicacoes: ["Vasinhos no rosto", "Rosácea leve", "Eritrose"]
+  },
+  {
+    nome: "Avaliação Nutricional",
+    categoria: "Saúde & Bem-estar",
+    descricao: "Consulta com profissional de nutrição para análise do perfil alimentar, composição corporal e elaboração de plano nutricional individualizado.",
+    beneficios: ["Plano alimentar individualizado", "Acompanhamento profissional", "Melhora da qualidade de vida"],
+    indicacoes: ["Emagrecimento", "Ganho de massa", "Reeducação alimentar"]
+  },
+  {
+    nome: "Bioestimulador de Colágeno",
+    categoria: "Facial",
+    descricao: "Substância injetável que estimula a produção natural de colágeno, promovendo rejuvenescimento progressivo, melhora da firmeza e preenchimento de áreas flácidas.",
+    beneficios: ["Estímulo natural de colágeno", "Rejuvenescimento progressivo", "Melhora da firmeza"],
+    indicacoes: ["Flacidez facial", "Envelhecimento", "Perda de volume"]
+  },
+  {
+    nome: "Botox",
+    categoria: "Facial",
+    descricao: "Aplicação de toxina botulínica para relaxamento muscular controlado, suavizando rugas de expressão e prevenindo novas marcas.",
+    beneficios: ["Suaviza rugas de expressão", "Efeito preventivo", "Resultado natural"],
+    indicacoes: ["Rugas de expressão", "Pés de galinha", "Linha do leão"]
+  },
+  {
+    nome: "Brow Lamination",
+    categoria: "Estética & Beleza",
+    descricao: "Procedimento que alinha e fixa os fios das sobrancelhas em uma posição desejada, criando um efeito penteado, volumoso e uniforme.",
+    beneficios: ["Sobrancelhas alinhadas", "Efeito volumoso", "Resultado duradouro"],
+    indicacoes: ["Sobrancelhas desalinhadas", "Fios rebeldes", "Volume e definição"]
+  },
+  {
+    nome: "Carboxiterapia",
+    categoria: "Corporal",
+    descricao: "Infiltração de gás carbônico medicinal sob a pele para estimular a circulação, melhorar a oxigenação tecidual e combater gordura, celulite e flacidez.",
+    beneficios: ["Melhora da circulação", "Redução de celulite", "Combate à flacidez"],
+    indicacoes: ["Celulite", "Gordura localizada", "Estrias", "Olheiras"]
+  },
+  {
+    nome: "Consulta de Melasma (Manchas)",
+    categoria: "Facial",
+    descricao: "Avaliação dermatológica especializada para diagnóstico e elaboração de protocolo personalizado no tratamento de manchas escuras na pele.",
+    beneficios: ["Diagnóstico especializado", "Protocolo personalizado", "Pele mais uniforme"],
+    indicacoes: ["Melasma", "Manchas hormonais", "Hiperpigmentação"]
+  },
+  {
+    nome: "Criofrequência e Criolipólise",
+    categoria: "Corporal",
+    descricao: "Combinação de frio intenso e radiofrequência para eliminar células de gordura de forma não invasiva, firmando a pele simultaneamente.",
+    beneficios: ["Eliminação de gordura localizada", "Pele mais firme", "Procedimento não invasivo"],
+    indicacoes: ["Gordura localizada", "Flacidez", "Abdômen", "Flancos"]
+  },
+  {
+    nome: "Depilação a Laser",
+    categoria: "Depilação",
+    descricao: "Tecnologia de luz pulsada que destrói o folículo piloso de forma definitiva e progressiva, reduzindo significativamente o crescimento dos pelos.",
+    beneficios: ["Redução definitiva dos pelos", "Menos irritação na pele", "Praticidade no dia a dia"],
+    indicacoes: ["Pelos indesejados", "Pele sensível", "Foliculite"]
+  },
+  {
+    nome: "Depilação com Cera",
+    categoria: "Depilação",
+    descricao: "Remoção dos pelos pela raiz com cera quente ou fria, deixando a pele lisa por mais tempo em comparação ao barbear convencional.",
+    beneficios: ["Pele lisa por mais tempo", "Resultado imediato", "Pelos mais finos com o tempo"],
+    indicacoes: ["Pelos em qualquer região", "Resultado imediato"]
+  },
+  {
+    nome: "Depilação Egípcia",
+    categoria: "Depilação",
+    descricao: "Método ancestral de depilação com pasta de açúcar natural, indicada para peles sensíveis, com menor risco de irritação e pelos encravados.",
+    beneficios: ["Menor irritação da pele", "Reduz pelos encravados", "Ingredientes naturais"],
+    indicacoes: ["Pele sensível", "Pelos encravados", "Opção natural"]
+  },
+  {
+    nome: "Descolamento com Cânula",
+    categoria: "Facial",
+    descricao: "Técnica minimamente invasiva que utiliza cânula para soltar aderências da pele, combatendo marcas de expressão profundas e cicatrizes.",
+    beneficios: ["Suaviza marcas profundas", "Técnica minimamente invasiva", "Melhora de cicatrizes"],
+    indicacoes: ["Rugas profundas", "Cicatrizes", "Sulcos"]
+  },
+  {
+    nome: "Design de Sobrancelha com ou sem Henna",
+    categoria: "Estética & Beleza",
+    descricao: "Modelagem personalizada das sobrancelhas de acordo com o formato do rosto, com opção de coloração com henna para maior definição e durabilidade.",
+    beneficios: ["Design personalizado", "Maior definição", "Durabilidade com henna"],
+    indicacoes: ["Sobrancelhas sem definição", "Assimetria", "Design personalizado"]
+  },
+  {
+    nome: "Detox Corporal",
+    categoria: "Corporal",
+    descricao: "Protocolo de tratamento corporal que combina técnicas manuais e ativos cosméticos para eliminar toxinas, reduzir retenção hídrica e revitalizar o organismo.",
+    beneficios: ["Eliminação de toxinas", "Redução de inchaço", "Revitalização do corpo"],
+    indicacoes: ["Inchaço", "Retenção hídrica", "Cansaço corporal"]
+  },
+  {
+    nome: "Drenagem Linfática para Gestante",
+    categoria: "Corporal",
+    descricao: "Massagem suave e segura adaptada para gestantes, que estimula o sistema linfático, reduz inchaço e promove bem-estar durante a gravidez.",
+    beneficios: ["Reduz inchaço", "Alívio de desconforto", "Segura para gestantes"],
+    indicacoes: ["Inchaço na gestação", "Retenção hídrica", "Desconforto nas pernas"]
+  },
+  {
+    nome: "Drenagem Linfática para Retenção",
+    categoria: "Corporal",
+    descricao: "Técnica de massagem que estimula o fluxo da linfa, eliminando líquidos e toxinas acumulados no organismo, reduzindo inchaço e sensação de peso.",
+    beneficios: ["Elimina líquidos retidos", "Reduz sensação de peso", "Melhora a circulação"],
+    indicacoes: ["Retenção hídrica", "Inchaço", "Pré-TPM"]
+  },
+  {
+    nome: "Fios de PDO",
+    categoria: "Facial",
+    descricao: "Fios absorvíveis inseridos sob a pele para promover sustentação imediata e estimular o colágeno, resultando em lifting sem cirurgia.",
+    beneficios: ["Sustentação imediata", "Estímulo de colágeno", "Lifting sem cirurgia"],
+    indicacoes: ["Flacidez facial", "Papada", "Lifting não cirúrgico"]
+  },
+  {
+    nome: "Glúteo Max",
+    categoria: "Corporal",
+    descricao: "Protocolo corporal com combinação de tecnologias e ativos para modelar, firmar e aumentar visualmente o volume dos glúteos.",
+    beneficios: ["Modelagem dos glúteos", "Efeito firmador", "Aumento visual de volume"],
+    indicacoes: ["Glúteos flácidos", "Modelagem corporal", "Estética corporal"]
+  },
+  {
+    nome: "Laser CO2",
+    categoria: "Facial",
+    descricao: "Laser fracionado de alta precisão que promove renovação celular profunda, tratando rugas, manchas, cicatrizes e poros dilatados com eficácia.",
+    beneficios: ["Renovação celular profunda", "Redução de manchas e rugas", "Poros mais refinados"],
+    indicacoes: ["Manchas", "Rugas", "Cicatrizes de acne", "Rejuvenescimento"]
+  },
+  {
+    nome: "Laser Lavieen",
+    categoria: "Facial",
+    descricao: "Laser de picossegundos indicado para tratamento de manchas, melasma e rejuvenescimento, com mínimo desconforto e recuperação rápida.",
+    beneficios: ["Recuperação rápida", "Mínimo desconforto", "Pele mais uniforme"],
+    indicacoes: ["Melasma", "Manchas", "Pele opaca"]
+  },
+  {
+    nome: "Laserterapia (LED / Laser)",
+    categoria: "Corporal",
+    descricao: "Terapia com luz LED ou laser de baixa intensidade para estimular a cicatrização, reduzir inflamação, aliviar dores e melhorar a saúde da pele.",
+    beneficios: ["Alívio de dores", "Redução de inflamação", "Estímulo à cicatrização"],
+    indicacoes: ["Dores musculares", "Cicatrização", "Inflamação"]
+  },
+  {
+    nome: "Lash Lifting",
+    categoria: "Estética & Beleza",
+    descricao: "Permanente para cílios naturais que os curva da raiz às pontas, criando efeito de olhar aberto e expressivo sem necessidade de máscara.",
+    beneficios: ["Olhar mais aberto", "Dispensa uso de máscara", "Efeito duradouro"],
+    indicacoes: ["Cílios retos", "Olhar cansado", "Praticidade no dia a dia"]
+  },
+  {
+    nome: "Limpeza de Pele",
+    categoria: "Facial",
+    descricao: "Procedimento que remove impurezas, cravos e células mortas da pele por meio de esfoliação, vapor e extração, deixando o rosto limpo e renovado.",
+    beneficios: ["Remove impurezas e cravos", "Pele renovada", "Melhora a textura"],
+    indicacoes: ["Pele oleosa", "Cravos", "Poros dilatados", "Acne"]
+  },
+  {
+    nome: "Massagem Modeladora",
+    categoria: "Corporal",
+    descricao: "Massagem vigorosa com movimentos específicos para quebrar nódulos de gordura, modelar o contorno corporal e melhorar a circulação.",
+    beneficios: ["Modelagem corporal", "Quebra de nódulos de gordura", "Melhora da circulação"],
+    indicacoes: ["Celulite", "Gordura localizada", "Modelagem do corpo"]
+  },
+  {
+    nome: "Massagem Relaxante",
+    categoria: "Corporal",
+    descricao: "Técnica de massagem com movimentos suaves e rítmicos para aliviar tensão muscular, reduzir o estresse e proporcionar bem-estar geral.",
+    beneficios: ["Alívio da tensão muscular", "Redução do estresse", "Bem-estar geral"],
+    indicacoes: ["Tensão muscular", "Estresse", "Ansiedade"]
+  },
+  {
+    nome: "Microagulhamento",
+    categoria: "Facial",
+    descricao: "Técnica com microagulhas que cria microlesões controladas na pele, estimulando a produção de colágeno e elastina para rejuvenescimento e tratamento de cicatrizes.",
+    beneficios: ["Estímulo de colágeno e elastina", "Redução de cicatrizes", "Pele rejuvenescida"],
+    indicacoes: ["Cicatrizes de acne", "Rugas finas", "Poros dilatados", "Manchas"]
+  },
+  {
+    nome: "Micropigmentação de Sobrancelha",
+    categoria: "Estética & Beleza",
+    descricao: "Técnica semipermanente de implantação de pigmento na derme para redesenhar, preencher ou definir as sobrancelhas com resultado natural.",
+    beneficios: ["Resultado natural", "Efeito semipermanente", "Praticidade diária"],
+    indicacoes: ["Sobrancelhas ralas", "Alopecia", "Praticidade"]
+  },
+  {
+    nome: "Micropigmentação Labial",
+    categoria: "Estética & Beleza",
+    descricao: "Pigmentação semipermanente nos lábios para definir o contorno, uniformizar a cor e dar aparência de lábios mais cheios e corados.",
+    beneficios: ["Contorno definido", "Cor uniforme", "Aparência de lábios mais cheios"],
+    indicacoes: ["Lábios apagados", "Contorno irregular", "Assimetria labial"]
+  },
+  {
+    nome: "Peeling Coreano",
+    categoria: "Facial",
+    descricao: "Peeling suave de origem coreana que renova a camada superficial da pele, deixando-a mais luminosa, uniforme e com textura refinada.",
+    beneficios: ["Pele mais luminosa", "Textura refinada", "Renovação suave"],
+    indicacoes: ["Opacidade", "Manchas leves", "Pele sem brilho"]
+  },
+  {
+    nome: "Peeling de Diamante",
+    categoria: "Facial",
+    descricao: "Esfoliação mecânica com ponteira de diamante que remove células mortas e estimula a renovação celular, melhorando textura e viço da pele.",
+    beneficios: ["Remove células mortas", "Estimula renovação celular", "Pele com mais viço"],
+    indicacoes: ["Pele opaca", "Textura irregular", "Cravos"]
+  },
+  {
+    nome: "Peeling Químico",
+    categoria: "Facial",
+    descricao: "Aplicação de ácidos em concentrações controladas para promover esfoliação profunda, tratar manchas, acne e rugas, e renovar a pele.",
+    beneficios: ["Esfoliação profunda", "Redução de manchas e acne", "Pele renovada"],
+    indicacoes: ["Manchas", "Acne", "Rugas", "Cicatrizes"]
+  },
+  {
+    nome: "Peeling Ultrassônico",
+    categoria: "Facial",
+    descricao: "Esfoliação por vibração ultrassônica que remove impurezas e células mortas sem contato abrasivo, indicada para peles sensíveis e reativas.",
+    beneficios: ["Esfoliação sem abrasão", "Indicado para peles sensíveis", "Remove impurezas"],
+    indicacoes: ["Pele sensível", "Impurezas", "Oleosidade"]
+  },
+  {
+    nome: "Plataforma Vibratória",
+    categoria: "Corporal",
+    descricao: "Equipamento que emite vibrações mecânicas para estimular a musculatura, melhorar a circulação, combater celulite e auxiliar na perda de medidas.",
+    beneficios: ["Estímulo muscular", "Melhora da circulação", "Auxilia na perda de medidas"],
+    indicacoes: ["Celulite", "Tonificação muscular", "Circulação"]
+  },
+  {
+    nome: "Pós-Operatório",
+    categoria: "Corporal",
+    descricao: "Protocolo de cuidados especializados após cirurgias plásticas, incluindo drenagem linfática, ultrassom e outros recursos para acelerar a recuperação.",
+    beneficios: ["Recuperação mais rápida", "Redução de inchaço e fibrose", "Cuidado especializado"],
+    indicacoes: ["Pós-cirurgia plástica", "Inchaço", "Fibrose"]
+  },
+  {
+    nome: "Preenchimento Facial",
+    categoria: "Facial",
+    descricao: "Injeção de ácido hialurônico para restaurar volumes perdidos, suavizar sulcos e contornar lábios, maçãs do rosto e mandíbula.",
+    beneficios: ["Restaura volume perdido", "Suaviza sulcos", "Contorno definido"],
+    indicacoes: ["Perda de volume", "Sulco nasogeniano", "Lábios", "Olheiras"]
+  },
+  {
+    nome: "Radiofrequência",
+    categoria: "Corporal",
+    descricao: "Tecnologia que emite ondas de calor nas camadas profundas da pele, estimulando colágeno, firmando os tecidos e reduzindo gordura localizada.",
+    beneficios: ["Estímulo de colágeno", "Firmeza dos tecidos", "Redução de gordura localizada"],
+    indicacoes: ["Flacidez", "Celulite", "Gordura", "Rejuvenescimento"]
+  },
+  {
+    nome: "Skinbooster Revitalização e Hidratação",
+    categoria: "Facial",
+    descricao: "Microinjeções de ácido hialurônico de baixa densidade que hidratam profundamente a pele, melhoram a luminosidade e reduzem linhas finas.",
+    beneficios: ["Hidratação profunda", "Mais luminosidade", "Redução de linhas finas"],
+    indicacoes: ["Pele desidratada", "Opacidade", "Linhas finas"]
+  },
+  {
+    nome: "Ultrassom",
+    categoria: "Corporal",
+    descricao: "Equipamento que utiliza ondas sonoras de alta frequência para tratar gordura, celulite e flacidez, promovendo modelagem corporal sem dor.",
+    beneficios: ["Modelagem corporal", "Sem dor", "Redução de gordura e celulite"],
+    indicacoes: ["Gordura", "Celulite", "Flacidez"]
+  },
+  {
+    nome: "Ultrassom Micro / Macro Focado",
+    categoria: "Facial",
+    descricao: "Tecnologia de ultrassom focalizado que atinge camadas profundas da pele para promover lifting, firmeza e contorno facial sem cirurgia.",
+    beneficios: ["Lifting sem cirurgia", "Maior firmeza", "Contorno facial definido"],
+    indicacoes: ["Flacidez facial", "Lifting não invasivo", "Papada"]
+  },
 ];
 
-function renderProcedimentos(categoria){
+// ===============================
+// RENDERIZAR CARDS DE PROCEDIMENTOS
+// ===============================
 
-    const lista = document.getElementById("listaProcedimentos");
+// Guarda qual categoria está aberta no momento (null = nenhuma)
+let categoriaAtiva = null;
 
-    lista.innerHTML = "";
+function renderProcedimentos(lista = []) {
+    // OBS: o id abaixo precisa ser IGUAL ao id do container no HTML.
+    // No HTML atual o container é <div id="lista-procedimentos">.
+    const container = document.getElementById("lista-procedimentos");
 
-    const filtrados = procedimentos.filter(p => p.categoria === categoria);
+    if (!container) return;
 
-    if(filtrados.length === 0){
+    container.innerHTML = "";
 
-        lista.innerHTML = "<p class='sem-procedimentos'>Em breve novos procedimentos nesta categoria.</p>";
+    lista.forEach((procedimento) => {
+        // índice real dentro do array original "procedimentos"
+        // (necessário para abrir o modal certo, mesmo com a lista filtrada)
+        const indexReal = procedimentos.indexOf(procedimento);
 
-        return;
+        const card = document.createElement("div");
+        card.className = "card-procedimento";
+        card.style.cursor = "pointer";
 
-    }
-
-    filtrados.forEach(proc => {
-
-        const indexReal = procedimentos.indexOf(proc);
-
-        lista.innerHTML += `
-            <div class="card-procedimento">
-                <h3>${proc.nome}</h3>
-                <p>${proc.descricao}</p>
-                <button class="btn-saiba" onclick="abrirModalProcedimento(${indexReal})">Saiba Mais</button>
+        // Card enxuto: só nome, categoria e uma dica de que dá pra clicar.
+        // Descrição, benefícios e indicações completos ficam só no modal.
+        card.innerHTML = `
+            <div class="procedimento-header">
+                <h3>${procedimento.nome}</h3>
+                <span class="categoria">${procedimento.categoria}</span>
             </div>
+
+            <span class="ver-mais">Toque para ver detalhes</span>
         `;
 
-    });
+        // Abre o modal (janela flutuante com fundo embaçado) ao clicar no card.
+        // O clique no link do WhatsApp não deve abrir o modal, então checamos o alvo do clique.
+        card.addEventListener("click", (event) => {
+            if (event.target.closest("a")) return; // deixa o link do WhatsApp funcionar normalmente
+            abrirModalProcedimento(indexReal);
+        });
 
+        container.appendChild(card);
+    });
 }
 
 // ===============================
-// FILTRO DE CATEGORIAS
+// FILTRO DE CATEGORIAS (COM TOGGLE)
 // ===============================
 
-document.querySelectorAll(".categoria").forEach(botao => {
+function filtrarCategoria(categoria) {
+    const listaFiltrada = procedimentos.filter(
+        procedimento => procedimento.categoria === categoria
+    );
 
-    botao.addEventListener("click", function(){
+    renderProcedimentos(listaFiltrada);
+}
 
-        document.querySelectorAll(".categoria").forEach(b => b.classList.remove("ativa"));
+// Liga os botões de categoria (.categoria-btn) à função de filtro,
+// com comportamento de "sanfona": clicar de novo na mesma categoria fecha a lista.
+document.addEventListener("DOMContentLoaded", () => {
+    const botoes = document.querySelectorAll(".categoria-btn");
+    const container = document.getElementById("lista-procedimentos");
 
-        this.classList.add("ativa");
+    // Nada aparece até o usuário clicar em uma categoria.
+    if (container) container.innerHTML = "";
+    botoes.forEach(b => b.classList.remove("active"));
 
-        renderProcedimentos(this.dataset.categoria);
+    botoes.forEach(botao => {
+        botao.addEventListener("click", () => {
+            const categoria = botao.dataset.filter;
 
+            if (categoriaAtiva === categoria) {
+                // Clicou na mesma categoria que já estava aberta: fecha tudo.
+                categoriaAtiva = null;
+                botao.classList.remove("active");
+                if (container) container.innerHTML = "";
+                return;
+            }
+
+            // Abre a nova categoria (fechando qualquer outra que estivesse aberta).
+            categoriaAtiva = categoria;
+            botoes.forEach(b => b.classList.remove("active"));
+            botao.classList.add("active");
+            filtrarCategoria(categoria);
+        });
     });
-
 });
-
-// Renderiza a categoria inicial (facial) assim que a página carrega
-renderProcedimentos("facial");
 
 // ===============================
 // ABRIR MODAL DE PROCEDIMENTO
@@ -633,7 +587,7 @@ function abrirModalProcedimento(index){
 
     });
 
-    document.getElementById("indicacoesProcedimento").textContent = proc.indicacoes;
+    document.getElementById("indicacoesProcedimento").textContent = proc.indicacoes.join(", ");
 
     document.getElementById("btnWhatsappProcedimento").href =
         `https://wa.me/5511985813441?text=Olá! Gostaria de saber mais sobre o procedimento: ${proc.nome}.`;
