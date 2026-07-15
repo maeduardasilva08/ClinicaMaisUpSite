@@ -181,7 +181,7 @@ window.onclick = function(event){
 const procedimentos = [
   {
     nome: "Alongamento de Cílios",
-    categoria: "Estética & Beleza",
+    categoria: "Facial",
     descricao: "Técnica que adiciona fios sintéticos aos cílios naturais, proporcionando mais volume, curvatura e comprimento, com acabamento natural ou dramático.",
     beneficios: ["Mais volume e curvatura", "Efeito natural ou dramático", "Praticidade no dia a dia"],
     indicacoes: ["Olhos pequenos", "Cílios finos", "Ocasiões especiais"]
@@ -209,7 +209,7 @@ const procedimentos = [
   },
   {
     nome: "Avaliação Nutricional",
-    categoria: "Saúde & Bem-estar",
+    categoria: "Nutrição",
     descricao: "Consulta com profissional de nutrição para análise do perfil alimentar, composição corporal e elaboração de plano nutricional individualizado.",
     beneficios: ["Plano alimentar individualizado", "Acompanhamento profissional", "Melhora da qualidade de vida"],
     indicacoes: ["Emagrecimento", "Ganho de massa", "Reeducação alimentar"]
@@ -230,49 +230,92 @@ const procedimentos = [
   },
   {
     nome: "Brow Lamination",
-    categoria: "Estética & Beleza",
+    categoria: "Facial",
     descricao: "Procedimento que alinha e fixa os fios das sobrancelhas em uma posição desejada, criando um efeito penteado, volumoso e uniforme.",
     beneficios: ["Sobrancelhas alinhadas", "Efeito volumoso", "Resultado duradouro"],
     indicacoes: ["Sobrancelhas desalinhadas", "Fios rebeldes", "Volume e definição"]
   },
   {
     nome: "Carboxiterapia",
-    categoria: "Corporal",
-    descricao: "Infiltração de gás carbônico medicinal sob a pele para estimular a circulação, melhorar a oxigenação tecidual e combater gordura, celulite e flacidez.",
+    categoria: ["Corporal", "Facial"],
+    descricao: "Infiltração de gás carbônico medicinal sob a pele para estimular a circulação e a oxigenação dos tecidos. Pode ser aplicada tanto no corpo quanto no rosto, com benefícios específicos para cada região.",
     beneficios: ["Melhora da circulação", "Redução de celulite", "Combate à flacidez"],
-    indicacoes: ["Celulite", "Gordura localizada", "Estrias", "Olheiras"]
+    indicacoes: ["Celulite", "Gordura localizada", "Estrias", "Olheiras"],
+    areas: [
+        {
+            nome: "Corporal",
+            exemplo: "Celulite, estrias e gordura localizada",
+            beneficios: ["Melhora da circulação sanguínea", "Redução da celulite e das estrias", "Combate à flacidez corporal"]
+        },
+        {
+            nome: "Facial",
+            exemplo: "Olheiras",
+            beneficios: ["Redução de olheiras", "Pele mais oxigenada", "Aumento do viço e da luminosidade"]
+        }
+    ]
   },
   {
-    nome: "Consulta de Melasma (Manchas)",
+    nome: "Melasma",
     categoria: "Facial",
     descricao: "Avaliação dermatológica especializada para diagnóstico e elaboração de protocolo personalizado no tratamento de manchas escuras na pele.",
     beneficios: ["Diagnóstico especializado", "Protocolo personalizado", "Pele mais uniforme"],
     indicacoes: ["Melasma", "Manchas hormonais", "Hiperpigmentação"]
   },
   {
-    nome: "Criofrequência e Criolipólise",
-    categoria: "Corporal",
-    descricao: "Combinação de frio intenso e radiofrequência para eliminar células de gordura de forma não invasiva, firmando a pele simultaneamente.",
-    beneficios: ["Eliminação de gordura localizada", "Pele mais firme", "Procedimento não invasivo"],
-    indicacoes: ["Gordura localizada", "Flacidez", "Abdômen", "Flancos"]
+    nome: "Criofrequência",
+    categoria: ["Corporal", "Facial"],
+    descricao: "Combinação de radiofrequência com resfriamento controlado que estimula a produção de colágeno e firma a pele. Pode ser aplicada tanto no corpo quanto no rosto, com benefícios específicos para cada região.",
+    beneficios: ["Estímulo de colágeno", "Pele mais firme", "Procedimento não invasivo"],
+    indicacoes: ["Flacidez", "Abdômen", "Flancos", "Papada"],
+    areas: [
+        {
+            nome: "Corporal",
+            exemplo: "Abdômen, flancos e braços",
+            beneficios: ["Firmeza da pele do corpo", "Estímulo de colágeno", "Melhora da flacidez corporal"]
+        },
+        {
+            nome: "Facial",
+            exemplo: "Papada e contorno do rosto",
+            beneficios: ["Firmeza facial", "Efeito lifting sutil", "Estímulo de colágeno no rosto"]
+        }
+    ]
+  },
+  {
+    nome: "Criolipólise",
+    categoria: ["Corporal", "Facial"],
+    descricao: "Técnica que utiliza frio intenso e controlado para eliminar células de gordura localizada de forma não invasiva, sem tempo de recuperação. Pode ser aplicada tanto no corpo quanto no rosto, com benefícios específicos para cada região.",
+    beneficios: ["Eliminação de gordura localizada", "Procedimento não invasivo", "Sem tempo de recuperação"],
+    indicacoes: ["Gordura localizada", "Abdômen", "Flancos", "Papada"],
+    areas: [
+        {
+            nome: "Corporal",
+            exemplo: "Abdômen, flancos e culote",
+            beneficios: ["Eliminação de gordura localizada no corpo", "Sem tempo de recuperação", "Resultado progressivo e natural"]
+        },
+        {
+            nome: "Facial",
+            exemplo: "Papada",
+            beneficios: ["Redução da papada", "Contorno facial mais definido", "Procedimento não invasivo"]
+        }
+    ]
   },
   {
     nome: "Depilação a Laser",
-    categoria: "Depilação",
+    categoria: "Corporal",
     descricao: "Tecnologia de luz pulsada que destrói o folículo piloso de forma definitiva e progressiva, reduzindo significativamente o crescimento dos pelos.",
     beneficios: ["Redução definitiva dos pelos", "Menos irritação na pele", "Praticidade no dia a dia"],
     indicacoes: ["Pelos indesejados", "Pele sensível", "Foliculite"]
   },
   {
     nome: "Depilação com Cera",
-    categoria: "Depilação",
+    categoria: "Corporal",
     descricao: "Remoção dos pelos pela raiz com cera quente ou fria, deixando a pele lisa por mais tempo em comparação ao barbear convencional.",
     beneficios: ["Pele lisa por mais tempo", "Resultado imediato", "Pelos mais finos com o tempo"],
     indicacoes: ["Pelos em qualquer região", "Resultado imediato"]
   },
   {
     nome: "Depilação Egípcia",
-    categoria: "Depilação",
+    categoria: "Corporal",
     descricao: "Método ancestral de depilação com pasta de açúcar natural, indicada para peles sensíveis, com menor risco de irritação e pelos encravados.",
     beneficios: ["Menor irritação da pele", "Reduz pelos encravados", "Ingredientes naturais"],
     indicacoes: ["Pele sensível", "Pelos encravados", "Opção natural"]
@@ -286,7 +329,7 @@ const procedimentos = [
   },
   {
     nome: "Design de Sobrancelha com ou sem Henna",
-    categoria: "Estética & Beleza",
+    categoria: "Facial",
     descricao: "Modelagem personalizada das sobrancelhas de acordo com o formato do rosto, com opção de coloração com henna para maior definição e durabilidade.",
     beneficios: ["Design personalizado", "Maior definição", "Durabilidade com henna"],
     indicacoes: ["Sobrancelhas sem definição", "Assimetria", "Design personalizado"]
@@ -299,18 +342,40 @@ const procedimentos = [
     indicacoes: ["Inchaço", "Retenção hídrica", "Cansaço corporal"]
   },
   {
-    nome: "Drenagem Linfática para Gestante",
+    nome: "Drenagem Linfática",
     categoria: "Corporal",
-    descricao: "Massagem suave e segura adaptada para gestantes, que estimula o sistema linfático, reduz inchaço e promove bem-estar durante a gravidez.",
-    beneficios: ["Reduz inchaço", "Alívio de desconforto", "Segura para gestantes"],
-    indicacoes: ["Inchaço na gestação", "Retenção hídrica", "Desconforto nas pernas"]
+    descricao: "Técnica de massagem que estimula o sistema linfático, elimina líquidos e toxinas acumulados no organismo e reduz o inchaço. A Clínica Mais Up oferece protocolos adaptados a diferentes necessidades.",
+    beneficios: ["Reduz inchaço", "Melhora a circulação", "Elimina líquidos e toxinas retidos"],
+    indicacoes: ["Retenção hídrica", "Inchaço", "Gestação", "Pré-TPM"],
+    subtipos: [
+        {
+            nome: "Drenagem para Gestante",
+            descricao: "Massagem suave e segura adaptada para gestantes, que estimula o sistema linfático, reduz inchaço e promove bem-estar durante a gravidez."
+        },
+        {
+            nome: "Drenagem para Retenção",
+            descricao: "Técnica de massagem que estimula o fluxo da linfa, eliminando líquidos e toxinas acumulados no organismo, reduzindo inchaço e sensação de peso."
+        }
+    ]
   },
   {
-    nome: "Drenagem Linfática para Retenção",
-    categoria: "Corporal",
-    descricao: "Técnica de massagem que estimula o fluxo da linfa, eliminando líquidos e toxinas acumulados no organismo, reduzindo inchaço e sensação de peso.",
-    beneficios: ["Elimina líquidos retidos", "Reduz sensação de peso", "Melhora a circulação"],
-    indicacoes: ["Retenção hídrica", "Inchaço", "Pré-TPM"]
+    nome: "Endermologia",
+    categoria: ["Corporal", "Facial"],
+    descricao: "Massagem mecânica com sucção controlada que estimula a circulação, a drenagem linfática e a produção de colágeno. Pode ser aplicada tanto no corpo quanto no rosto, com benefícios específicos para cada região.",
+    beneficios: ["Estímulo da circulação e drenagem", "Redução da celulite", "Melhora da qualidade da pele"],
+    indicacoes: ["Celulite", "Gordura localizada", "Flacidez", "Contorno facial"],
+    areas: [
+        {
+            nome: "Corporal",
+            exemplo: "Celulite, gordura localizada, abdômen e coxas",
+            beneficios: ["Redução da celulite e da gordura localizada", "Modelagem corporal", "Melhora da circulação e da drenagem"]
+        },
+        {
+            nome: "Facial",
+            exemplo: "Contorno facial e olheiras",
+            beneficios: ["Efeito lifting e drenante no rosto", "Estímulo de colágeno facial", "Redução de inchaço e olheiras"]
+        }
+    ]
   },
   {
     nome: "Fios de PDO",
@@ -318,6 +383,25 @@ const procedimentos = [
     descricao: "Fios absorvíveis inseridos sob a pele para promover sustentação imediata e estimular o colágeno, resultando em lifting sem cirurgia.",
     beneficios: ["Sustentação imediata", "Estímulo de colágeno", "Lifting sem cirurgia"],
     indicacoes: ["Flacidez facial", "Papada", "Lifting não cirúrgico"]
+  },
+  {
+    nome: "Fotobiomodulação",
+    categoria: ["Facial", "Corporal"],
+    descricao: "Terapia que utiliza luz de LED ou laser de baixa intensidade para estimular processos celulares, acelerando a reparação dos tecidos. Pode ser aplicada tanto no rosto quanto no corpo, com benefícios específicos para cada região.",
+    beneficios: ["Estímulo celular e de colágeno", "Ação anti-inflamatória", "Recuperação tecidual mais rápida"],
+    indicacoes: ["Rejuvenescimento", "Acne", "Dores musculares", "Cicatrização"],
+    areas: [
+        {
+            nome: "Facial",
+            exemplo: "Rejuvenescimento e tratamento de acne",
+            beneficios: ["Estímulo de colágeno e elastina", "Ação bactericida no tratamento de acne", "Redução de linhas finas"]
+        },
+        {
+            nome: "Corporal",
+            exemplo: "Alívio de dores e redução de medidas",
+            beneficios: ["Alívio de dores musculares", "Auxílio na redução de medidas", "Melhora da cicatrização"]
+        }
+    ]
   },
   {
     nome: "Glúteo Max",
@@ -342,14 +426,26 @@ const procedimentos = [
   },
   {
     nome: "Laserterapia (LED / Laser)",
-    categoria: "Corporal",
-    descricao: "Terapia com luz LED ou laser de baixa intensidade para estimular a cicatrização, reduzir inflamação, aliviar dores e melhorar a saúde da pele.",
+    categoria: ["Corporal", "Facial"],
+    descricao: "Terapia com luz LED ou laser de baixa intensidade que estimula a cicatrização, reduz inflamação e melhora a saúde da pele. Pode ser aplicada tanto no corpo quanto no rosto, com benefícios específicos para cada região.",
     beneficios: ["Alívio de dores", "Redução de inflamação", "Estímulo à cicatrização"],
-    indicacoes: ["Dores musculares", "Cicatrização", "Inflamação"]
+    indicacoes: ["Dores musculares", "Cicatrização", "Inflamação", "Acne"],
+    areas: [
+        {
+            nome: "Corporal",
+            exemplo: "Dores musculares e cicatrização",
+            beneficios: ["Alívio de dores musculares", "Redução de inflamação", "Estímulo à cicatrização de tecidos"]
+        },
+        {
+            nome: "Facial",
+            exemplo: "Acne e rejuvenescimento",
+            beneficios: ["Ação anti-inflamatória na acne", "Estímulo de colágeno", "Pele com aspecto mais uniforme"]
+        }
+    ]
   },
   {
     nome: "Lash Lifting",
-    categoria: "Estética & Beleza",
+    categoria: "Facial",
     descricao: "Permanente para cílios naturais que os curva da raiz às pontas, criando efeito de olhar aberto e expressivo sem necessidade de máscara.",
     beneficios: ["Olhar mais aberto", "Dispensa uso de máscara", "Efeito duradouro"],
     indicacoes: ["Cílios retos", "Olhar cansado", "Praticidade no dia a dia"]
@@ -362,18 +458,21 @@ const procedimentos = [
     indicacoes: ["Pele oleosa", "Cravos", "Poros dilatados", "Acne"]
   },
   {
-    nome: "Massagem Modeladora",
+    nome: "Massagem",
     categoria: "Corporal",
-    descricao: "Massagem vigorosa com movimentos específicos para quebrar nódulos de gordura, modelar o contorno corporal e melhorar a circulação.",
-    beneficios: ["Modelagem corporal", "Quebra de nódulos de gordura", "Melhora da circulação"],
-    indicacoes: ["Celulite", "Gordura localizada", "Modelagem do corpo"]
-  },
-  {
-    nome: "Massagem Relaxante",
-    categoria: "Corporal",
-    descricao: "Técnica de massagem com movimentos suaves e rítmicos para aliviar tensão muscular, reduzir o estresse e proporcionar bem-estar geral.",
-    beneficios: ["Alívio da tensão muscular", "Redução do estresse", "Bem-estar geral"],
-    indicacoes: ["Tensão muscular", "Estresse", "Ansiedade"]
+    descricao: "A Clínica Mais Up oferece diferentes tipos de massagem, unindo técnica e bem-estar para atender às necessidades de cada paciente.",
+    beneficios: ["Melhora da circulação", "Alívio de tensões", "Bem-estar físico e mental"],
+    indicacoes: ["Tensão muscular", "Estresse", "Celulite e gordura localizada", "Relaxamento"],
+    subtipos: [
+        {
+            nome: "Massagem Modeladora",
+            descricao: "Massagem vigorosa com movimentos específicos para quebrar nódulos de gordura, modelar o contorno corporal e melhorar a circulação."
+        },
+        {
+            nome: "Massagem Relaxante",
+            descricao: "Técnica de massagem com movimentos suaves e rítmicos para aliviar tensão muscular, reduzir o estresse e proporcionar bem-estar geral."
+        }
+    ]
   },
   {
     nome: "Microagulhamento",
@@ -384,14 +483,14 @@ const procedimentos = [
   },
   {
     nome: "Micropigmentação de Sobrancelha",
-    categoria: "Estética & Beleza",
+    categoria: "Facial",
     descricao: "Técnica semipermanente de implantação de pigmento na derme para redesenhar, preencher ou definir as sobrancelhas com resultado natural.",
     beneficios: ["Resultado natural", "Efeito semipermanente", "Praticidade diária"],
     indicacoes: ["Sobrancelhas ralas", "Alopecia", "Praticidade"]
   },
   {
     nome: "Micropigmentação Labial",
-    categoria: "Estética & Beleza",
+    categoria: "Facial",
     descricao: "Pigmentação semipermanente nos lábios para definir o contorno, uniformizar a cor e dar aparência de lábios mais cheios e corados.",
     beneficios: ["Contorno definido", "Cor uniforme", "Aparência de lábios mais cheios"],
     indicacoes: ["Lábios apagados", "Contorno irregular", "Assimetria labial"]
@@ -447,10 +546,22 @@ const procedimentos = [
   },
   {
     nome: "Radiofrequência",
-    categoria: "Corporal",
-    descricao: "Tecnologia que emite ondas de calor nas camadas profundas da pele, estimulando colágeno, firmando os tecidos e reduzindo gordura localizada.",
+    categoria: ["Corporal", "Facial"],
+    descricao: "Tecnologia que emite ondas de calor nas camadas profundas da pele, estimulando colágeno e firmando os tecidos. Pode ser aplicada tanto no corpo quanto no rosto, com benefícios específicos para cada região.",
     beneficios: ["Estímulo de colágeno", "Firmeza dos tecidos", "Redução de gordura localizada"],
-    indicacoes: ["Flacidez", "Celulite", "Gordura", "Rejuvenescimento"]
+    indicacoes: ["Flacidez", "Celulite", "Gordura", "Rejuvenescimento facial"],
+    areas: [
+        {
+            nome: "Corporal",
+            exemplo: "Abdômen, braços e coxas",
+            beneficios: ["Firmeza dos tecidos do corpo", "Redução de gordura localizada", "Melhora da celulite"]
+        },
+        {
+            nome: "Facial",
+            exemplo: "Rosto e pescoço",
+            beneficios: ["Rejuvenescimento facial", "Estímulo de colágeno no rosto", "Efeito lifting não cirúrgico"]
+        }
+    ]
   },
   {
     nome: "Skinbooster Revitalização e Hidratação",
@@ -460,11 +571,49 @@ const procedimentos = [
     indicacoes: ["Pele desidratada", "Opacidade", "Linhas finas"]
   },
   {
+    nome: "Tork (Ondas de Choque)",
+    categoria: ["Corporal", "Facial"],
+    descricao: "Equipamento de ondas de choque que gera microestímulos mecânicos no tecido, promovendo remodelação do colágeno e melhora da circulação. Pode ser aplicado tanto no corpo quanto no rosto, com benefícios específicos para cada região.",
+    beneficios: ["Estímulo de colágeno", "Melhora da circulação", "Remodelação do tecido"],
+    indicacoes: ["Celulite", "Gordura localizada", "Estrias", "Flacidez", "Rejuvenescimento facial"],
+    areas: [
+        {
+            nome: "Corporal",
+            exemplo: "Celulite, gordura localizada e estrias",
+            beneficios: ["Redução da celulite", "Modelagem do contorno corporal", "Melhora de estrias e flacidez"]
+        },
+        {
+            nome: "Facial",
+            exemplo: "Rejuvenescimento facial",
+            beneficios: ["Estímulo de colágeno no rosto", "Melhora da firmeza facial", "Efeito rejuvenescedor"]
+        }
+    ]
+  },
+  {
     nome: "Ultrassom",
-    categoria: "Corporal",
-    descricao: "Equipamento que utiliza ondas sonoras de alta frequência para tratar gordura, celulite e flacidez, promovendo modelagem corporal sem dor.",
+    categoria: ["Corporal", "Facial"],
+    descricao: "Equipamento que utiliza ondas sonoras de alta frequência para tratar gordura, celulite e flacidez, promovendo modelagem sem dor. Pode ser aplicado tanto no corpo quanto no rosto, com benefícios específicos para cada região.",
     beneficios: ["Modelagem corporal", "Sem dor", "Redução de gordura e celulite"],
-    indicacoes: ["Gordura", "Celulite", "Flacidez"]
+    indicacoes: ["Gordura", "Celulite", "Flacidez"],
+    areas: [
+        {
+            nome: "Corporal",
+            exemplo: "Abdômen, celulite e gordura localizada",
+            beneficios: ["Modelagem do contorno corporal", "Redução de gordura e celulite", "Melhora da circulação"]
+        },
+        {
+            nome: "Facial",
+            exemplo: "Auxílio na drenagem e penetração de ativos",
+            beneficios: ["Melhora a absorção de ativos cosméticos", "Efeito drenante e relaxante no rosto", "Pele com aspecto mais uniforme"]
+        }
+    ]
+  },
+  {
+    nome: "Ultracavitação",
+    categoria: "Corporal",
+    descricao: "Tecnologia que utiliza ondas ultrassônicas de baixa frequência para romper as células de gordura localizada, que são posteriormente eliminadas pelo organismo. É um procedimento exclusivamente corporal.",
+    beneficios: ["Eliminação de gordura localizada", "Redução de medidas", "Procedimento não invasivo e indolor"],
+    indicacoes: ["Gordura localizada", "Abdômen", "Flancos", "Coxas"]
   },
   {
     nome: "Ultrassom Micro / Macro Focado",
@@ -502,10 +651,16 @@ function renderProcedimentos(lista = []) {
 
         // Card enxuto: só nome, categoria e uma dica de que dá pra clicar.
         // Descrição, benefícios e indicações completos ficam só no modal.
+        // Se o procedimento pertence a mais de uma categoria (ex.: aparelhos usados
+        // tanto no rosto quanto no corpo), mostra as duas no badge do card.
+        const categoriaTexto = Array.isArray(procedimento.categoria)
+            ? procedimento.categoria.join(" / ")
+            : procedimento.categoria;
+
         card.innerHTML = `
             <div class="procedimento-header">
                 <h3>${procedimento.nome}</h3>
-                <span class="categoria">${procedimento.categoria}</span>
+                <span class="categoria">${categoriaTexto}</span>
             </div>
 
             <span class="ver-mais">Toque para ver detalhes</span>
@@ -527,9 +682,12 @@ function renderProcedimentos(lista = []) {
 // ===============================
 
 function filtrarCategoria(categoria) {
-    const listaFiltrada = procedimentos.filter(
-        procedimento => procedimento.categoria === categoria
-    );
+    const listaFiltrada = procedimentos.filter(procedimento => {
+        if (Array.isArray(procedimento.categoria)) {
+            return procedimento.categoria.includes(categoria);
+        }
+        return procedimento.categoria === categoria;
+    });
 
     renderProcedimentos(listaFiltrada);
 }
@@ -588,6 +746,63 @@ function abrirModalProcedimento(index){
     });
 
     document.getElementById("indicacoesProcedimento").textContent = proc.indicacoes.join(", ");
+
+    // Seção "Tipos Disponíveis" — só aparece quando o procedimento tem subtipos
+    const tiposSection = document.getElementById("tiposProcedimentoSection");
+    const tiposContainer = document.getElementById("tiposProcedimento");
+
+    tiposContainer.innerHTML = "";
+
+    if (proc.subtipos && proc.subtipos.length > 0) {
+
+        proc.subtipos.forEach(subtipo => {
+            tiposContainer.innerHTML += `
+                <div class="subtipo-item">
+                    <h4>${subtipo.nome}</h4>
+                    <p>${subtipo.descricao}</p>
+                </div>
+            `;
+        });
+
+        tiposSection.style.display = "block";
+
+    } else {
+
+        tiposSection.style.display = "none";
+
+    }
+
+    // Seção "Onde pode ser aplicado" — mostra os benefícios específicos
+    // quando o mesmo aparelho/procedimento é usado no rosto e no corpo
+    // (ex.: Criolipólise no abdômen e na papada).
+    const areasSection = document.getElementById("areasProcedimentoSection");
+    const areasContainer = document.getElementById("areasProcedimento");
+
+    areasContainer.innerHTML = "";
+
+    if (proc.areas && proc.areas.length > 0) {
+
+        proc.areas.forEach(area => {
+
+            const beneficiosArea = area.beneficios
+                .map(item => `<li>${item}</li>`)
+                .join("");
+
+            areasContainer.innerHTML += `
+                <div class="area-item">
+                    <h4>${area.nome} <span class="area-exemplo">(ex.: ${area.exemplo})</span></h4>
+                    <ul>${beneficiosArea}</ul>
+                </div>
+            `;
+        });
+
+        areasSection.style.display = "block";
+
+    } else {
+
+        areasSection.style.display = "none";
+
+    }
 
     document.getElementById("btnWhatsappProcedimento").href =
         `https://wa.me/5511985813441?text=Olá! Gostaria de saber mais sobre o procedimento: ${proc.nome}.`;
