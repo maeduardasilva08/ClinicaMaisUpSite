@@ -62,12 +62,12 @@ export default function Hero() {
 
         {/* Image */}
         <div className="relative animate-[fadeIn_1s_ease]">
-          <div className="relative rounded-[35px] overflow-hidden shadow-2xl group">
-            <img
-              src="https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Clínica Mais Up — ambiente de cuidado e bem-estar"
-              className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
-            />
+          <div className="w-full h-[500px] object-cover object-top group-hover:scale-105 transition-transform duration-700">
+        <img
+          src="/images/lilian_capa.jpg"
+          alt="Clínica Mais Up — ambiente de cuidado e bem-estar"
+          className="w-full h-[500px] object-cover object-top group-hover:scale-105 transition-transform duration-700"
+        />
             <div className="absolute inset-0 bg-gradient-to-t from-areia-900/20 to-transparent" />
           </div>
           {/* Floating card */}

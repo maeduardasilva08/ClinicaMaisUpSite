@@ -74,7 +74,11 @@ function ProfissionalModal({ prof, onClose }: { prof: Profissional; onClose: () 
         </button>
 
         <div className="text-center mb-6">
-          <img src={prof.imagem} alt={prof.nome} className="w-24 h-24 rounded-full object-cover mx-auto mb-4 shadow-lg" />
+          <img
+            src={prof.imagem}
+            alt={prof.nome}
+            className="w-24 h-24 rounded-full object-cover object-top mx-auto mb-4 shadow-lg"
+          />
           <h3 className="font-serif text-3xl text-dourado-700">{prof.nome}</h3>
           <p className="text-areia-500 text-base mt-1">{prof.cargo}</p>
         </div>

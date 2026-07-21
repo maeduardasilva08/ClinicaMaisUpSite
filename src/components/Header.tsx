@@ -27,15 +27,13 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 flex items-center justify-between py-4">
-        <a href="#hero" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-dourado-400 to-dourado-600 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-            <Sparkles className="w-5 h-5 text-white" />
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="font-serif text-xl font-bold text-areia-800">Mais Up</span>
-            <span className="text-[10px] tracking-[3px] uppercase text-dourado-600 font-medium">Clínica de Estética</span>
-          </div>
-        </a>
+      <a href="#hero" className="flex items-center gap-2 group">
+      <img
+        src="/images/logo_maisup.png"
+        alt="Clínica Mais Up"
+         className="h-20 w-auto group-hover:scale-105 transition-transform duration-300"
+         />
+      </a>
 
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
