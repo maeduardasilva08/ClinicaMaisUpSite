@@ -27,8 +27,8 @@ export default function Contato() {
               <div>
                 <h4 className="font-serif text-base font-bold text-verde-500 mb-1">Endereço</h4>
                 <p className="text-areia-600 text-sm leading-relaxed">
-                  Clínica Mais Up<br />
-                  Entre em contato para conhecer nosso espaço
+                  Rua Rússia, 65<br />
+                  Jardim Planalto, Salto - SP
                 </p>
               </div>
             </div>
@@ -54,8 +54,8 @@ export default function Contato() {
               <div>
                 <h4 className="font-serif text-base font-bold text-verde-500 mb-1">Horário de Atendimento</h4>
                 <p className="text-areia-600 text-sm leading-relaxed">
-                  Segunda a sábado<br />
-                  Consulte horários disponíveis via WhatsApp
+                  Segunda a sexta: 8h às 18h<br />
+                  Sábado: 8h às 12h
                 </p>
               </div>
             </div>
@@ -67,8 +67,8 @@ export default function Contato() {
               <div>
                 <h4 className="font-serif text-base font-bold text-verde-500 mb-1">Instagram</h4>
                 <p className="text-areia-600 text-sm leading-relaxed">
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-dourado-600 transition-colors">
-                    @clinicamaisup
+                  <a href="https://instagram.com/maisupestetica" target="_blank" rel="noopener noreferrer" className="hover:text-dourado-600 transition-colors">
+                    @maisupestetica
                   </a>
                 </p>
               </div>
@@ -88,7 +88,7 @@ export default function Contato() {
           {/* Map */}
           <div className="rounded-2xl overflow-hidden shadow-lg min-h-[400px] lg:min-h-full">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975555!2d-46.6333!3d-23.5489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMyJzU2LjAiUyA0NsKwMzgnMDAuMCJW!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+              src="https://www.google.com/maps?q=Rua+R%C3%BAssia,+65,+Jardim+Planalto,+Salto+-+SP&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '400px' }}
